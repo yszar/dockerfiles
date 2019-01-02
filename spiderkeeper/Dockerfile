@@ -2,6 +2,7 @@ FROM python:3.6-slim
 MAINTAINER thsheep
 COPY requirements.txt /tmp/requirements.txt
 RUN mkdir /app \
+    && apt-get update && apt-get install -y gcc \
     && pip install --no-cache-dir --upgrade setuptools \
     && python -m pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r /tmp/requirements.txt \
