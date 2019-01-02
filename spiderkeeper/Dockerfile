@@ -1,4 +1,4 @@
-FROM python:3.6-silm
+FROM python:3.6-slim
 MAINTAINER thsheep
 COPY requirements.txt /tmp/requirements.txt
 RUN mkdir /app \
