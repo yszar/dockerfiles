@@ -1,0 +1,7 @@
+FROM python:3.6
+MAINTAINER yszar
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt
+COPY default_scrapyd.conf ~/.scrapyd.conf
+CMD ["scrapyd"]
+CMD ["spiderkeeper"]
